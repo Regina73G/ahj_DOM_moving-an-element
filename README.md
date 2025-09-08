@@ -1,1 +1,1 @@
-Шаблон с Webpack, jest, lint
+![CI](https://github.com/Regina73G/ahj_DOM_moving-an-element.git/actions/workflows/web.yml/badge.svg)
