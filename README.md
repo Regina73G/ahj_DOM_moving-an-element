@@ -1,1 +1,1 @@
-![CI](https://github.com/Regina73G/ahj_DOM_moving-an-element.git/actions/workflows/web.yml/badge.svg)
+[![AHJ](https://github.com/Regina73G/ahj_DOM_moving-an-element/actions/workflows/web.yml/badge.svg)](https://github.com/Regina73G/ahj_DOM_moving-an-element/actions/workflows/web.yml)
