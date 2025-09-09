@@ -38,9 +38,22 @@ export default class GamePlay {
     }
 
     this.cells = Array.from(this.boardEl.children);
+    console.log(this.boardEl);
+    console.log(this.cells);
   }
 
-  init() {
-    this.drawField();
+  redrawPosition(index) {
+    if (index < 0 || index >= this.cells.length) return;
+
+    for (const cell of this.cells) {
+      cell.innerHTML = ''; 
+    }
+
+    const cellEl = this.cells[index];
+    console.log(cellEl);
+    const goblinEl = document.createElement('div');
+    goblinEl.classList.add('goblin');
+
+    cellEl.appendChild(goblinEl);
   }
 }

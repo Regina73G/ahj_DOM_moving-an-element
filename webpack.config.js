@@ -6,8 +6,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'img/[path][name][ext][query]',
-    // publicPath: '/',
+    assetModuleFilename: 'img/[name][ext][query]',
+    publicPath: '/',
     clean: true,
   },
   module: {
