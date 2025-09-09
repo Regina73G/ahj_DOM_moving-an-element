@@ -1,3 +1,4 @@
+// Логика игры
 export default class GameController {
   constructor(gamePlay) {
     this.gamePlay = gamePlay;
@@ -10,7 +11,6 @@ export default class GameController {
 
     const boardSize = this.gamePlay.boardSize;
     this.position = this.generatePosition(boardSize);
-    console.log(this.position);
     this.gamePlay.redrawPosition(this.position);
 
     this.start();
@@ -22,6 +22,7 @@ export default class GameController {
 
     this.intervalId = setInterval(() => {
       let newPos;
+      // Генерирует новую позицию, чтобы она не совпадала с текущей
       do {
         newPos = this.generatePosition(boardSize);
       } while (newPos === this.position);
@@ -38,6 +39,7 @@ export default class GameController {
     }
   }
 
+  // Метод генерации случайной позиции на поле
   generatePosition(boardSize) {
     return Math.floor(Math.random() * (boardSize ** 2));
   }

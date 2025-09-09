@@ -6,6 +6,7 @@ export default class GamePlay {
     this.cells = [];
   }
 
+  // Привязка игрового поля к DOM-элементу
   bindToDOM(container) {
     if (!(container instanceof HTMLElement)) {
       throw new Error('container is not HTMLElement');
@@ -13,12 +14,14 @@ export default class GamePlay {
     this.container = container;
   }
 
+  // Проверка, привязан ли объект к DOM
   checkBinding() {
     if (this.container === null) {
       throw new Error('GamePlay not bind to DOM');
     }
   }
 
+  // Отрисовка поля
   drawField() {
     this.checkBinding();
 
@@ -38,10 +41,9 @@ export default class GamePlay {
     }
 
     this.cells = Array.from(this.boardEl.children);
-    console.log(this.boardEl);
-    console.log(this.cells);
   }
 
+  // Перерисовки гоблина на указанной позиции
   redrawPosition(index) {
     if (index < 0 || index >= this.cells.length) return;
 
@@ -50,7 +52,6 @@ export default class GamePlay {
     }
 
     const cellEl = this.cells[index];
-    console.log(cellEl);
     const goblinEl = document.createElement('div');
     goblinEl.classList.add('goblin');
 
